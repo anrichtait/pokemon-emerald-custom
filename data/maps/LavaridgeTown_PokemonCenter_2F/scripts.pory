@@ -1,0 +1,85 @@
+raw `
+LavaridgeTown_PokemonCenter_2F_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, CableClub_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, CableClub_OnWarp
+	map_script MAP_SCRIPT_ON_LOAD, CableClub_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, CableClub_OnTransition
+	.byte 0
+
+@ The below 3 are unused and leftover from RS
+LavaridgeTown_PokemonCenter_2F_EventScript_Colosseum::
+	call CableClub_EventScript_Colosseum
+	end
+
+LavaridgeTown_PokemonCenter_2F_EventScript_TradeCenter::
+	call CableClub_EventScript_TradeCenter
+	end
+
+LavaridgeTown_PokemonCenter_2F_EventScript_RecordCorner::
+	call CableClub_EventScript_RecordCorner
+	end
+
+`
+
+script Custom_Givemon_Lavaridge{
+
+    lockall
+    showmonpic(SPECIES_DREEPY, 10,3)
+    msgbox("Do you want this Dreepy?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_DREEPY, 10, ITEM_LUXURY_BALL)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Here you go!")
+            removeobject(5)
+            setflag(FLAG_UNUSED_0x023)
+            call(LavaridgeNicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Dreepy was placed in your PC.")
+            removeobject(5)
+            setflag(FLAG_UNUSED_0x023)
+            call(LavaridgeNicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("You need to release something to get this.")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(Custom_Givemon_Lavaridge_NotChosen)
+    }
+    waitmessage
+    releaseall
+    end
+
+}
+
+script LavaridgeNicknamePartyMon{
+
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+
+
+}
+
+script LavaridgeNicknameBoxMon{
+
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    call(Common_EventScript_TransferredToPC)
+
+}
+
+text Custom_Givemon_Lavaridge_NotChosen{
+    "Guess I'll just have to use it for spells..."
+}

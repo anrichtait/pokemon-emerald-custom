@@ -1,0 +1,10 @@
+#+title: Tasks
+
+* Implement:
+
+** TODO Create an encounter list for all the routes up to Roxanne.
+** TODO Roxanne Gym - trainers and leader.
+
+* Fix:
+
+** TODO Fix text issues when giving "hard stone"

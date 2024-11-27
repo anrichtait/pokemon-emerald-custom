@@ -1,0 +1,42 @@
+* Pokemon Emerald Expansion Onuz Base
+
+** Project Overview
+As a lifelong Pokémon enthusiast, I've enjoyed playing these games since childhood, and my interest has persisted into adulthood. Over time, I found myself drawn to nuzlocke challenges and exploring custom ROMs like Storm Silver by Drayano, which offer heightened difficulty and fresh gameplay experiences.
+
+Discovering the world of decomp projects opened up a new avenue for me to merge my interests in Pokémon with programming. As a father, this project also presents a unique opportunity to create a customized game specifically tailored for my kids. While they are still young, creating a full-fledged difficulty hack isn't feasible, but I aim to strike a balance that makes the game enjoyable for them while still providing a challenge that I can nuzlocke in my limited free time.
+
+** Features
+
+*** Custom Gyms
+
+In this Pokémon Emerald decomp project, each gym will offer a unique challenge tailored to highlight the strengths of their respective types. Gone are the days of facing repetitive teams of Geodudes with Tackle; instead, every trainer in the gym will have their own custom party with improved AI and strategic decision-making. The gym leader will serve as the ultimate challenge, requiring careful planning and problem-solving to overcome.
+
+To balance the increased difficulty, each gym leader will reward players with an extra item specific to their gym type upon defeat. For instance, after defeating Brawly at the Dewford Gym, players will receive a Black Belt.
+
+**** Rustboro City: Rock Gym
+  - [X] Custom parties for all trainers.
+  - [X] Custom party for Roxanne.
+  - [X] New reward item (Hard Stone).
+  - [X] Custom gym sign stating strengths and weaknesses of Rock type.
+  - [ ] Introduce Red with a custom team and narrative explanation.
+
+*** Global Features
+- [X] *Hard Level Caps*: Level caps that are set on each gym leader's ace Pokemon level.
+- [X] *New EXP Share*: Newer generation EXP share makes the item a toggle not a give item. All pokemon in the party will receive EXP.
+- [ ] *New Pokémon from All Regions for Each Route*: Introduce Pokémon from various regions to diversify encounters and enhance exploration.
+- [ ] *New "World Champion" Trainer Post-Steven*: Challenge a formidable World Champion trainer after the Steven fight, providing an ultimate test of skills.
+- [ ] *Red as World Champion Advisor*: Encounter Red before gym leader battles and major events. He offers tips, tests type coverage, and provides strategic warnings.
+- [ ] *Custom Gyms and Trainer Battles*: Revamp gyms and trainer battles with unique teams, improved AI, and strategic depth.
+- [ ] *Enhanced Battle Mechanics and AI*: Upgrade battle mechanics and AI to deliver more challenging and engaging gameplay experiences.
+- [ ] *Updated Level Curve*: Update the level curve to make trainers match the level of the player for each route/section of the game.
+
+** Project Goals
+
+- *Enhanced Gameplay Experience*: Introduce new challenges and gameplay mechanics that enrich the Pokémon Emerald experience, catering to both casual players and nuzlocke enthusiasts.
+- *Customization for All Ages*: Create a game that is accessible and enjoyable for younger players while offering depth and challenge for seasoned players.
+- *Continued Evolution*: Evolve and expand the project based on community feedback and emerging ideas, ensuring ongoing improvement and innovation.
+
+** Credits
+Based off RHH's pokeemerald-expansion v1.8.0 https://github.com/rh-hideout/pokeemerald-expansion/
+
+[[https://discord.gg/6CzjAG6GZk][Click here to join the RHH Discord Server!]]
